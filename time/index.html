@@ -1,145 +1,50 @@
-<head>
-	<style>
-		/* Interface */
-		* {
-			box-sizing: border-box;
-		}
-		body {
-			font-family: sans-serif;
-		}
-		.title {
-			text-align: center;
-		}
-		.controls {
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			flex-direction: column;
-			gap: 5px;
-			padding: 20px;
-		}
-		.controls-buttons {
-			display: flex;
-			justify-content: center;
-			gap: 5px;
-		}
-		#container {
-			transition: .5s;
-		}
-
-		/* Finished class example */
-		.example2 {
-			margin: 0 auto;
-			max-width: 40em;
-			padding: 20px;
-			font-family: sans-serif;
-			color: #333;
-			font-size: 24px;
-			line-height: 1.4em;
-		}
-
-		/* Write your CSS code below! */
-           
-
-        /* 你自己的 classList 样式 */
-        .my-style {
-            margin: 0 auto;
-            max-width: 38em;
-            padding: 28px;
-            background-color: #fff8e1;
-            border: 2px dashed #f9a825;
-            border-radius: 16px;
-            font-size: 18px;
-            line-height: 1.8;
-            color: #5d4037;
-        }
-
-
-	</style>
-</head>
+<!DOCTYPE html>
+<html>
 <body>
-	<header class="controls">
-		<h1 class="title">WEEKLY CHALLENGE</h1>
 
-		<h2>Finished examples</h2>
-		<div class="controls-buttons">
-			<button onclick="resetAllStyles();">Reset all styles</button>
-			<button onclick="example1();">Example using <code>.style.propertyName</code></button>
-			<button onclick="example2();">Example using <code>.classList.add()</code></button>
-		</div>
+<h1>Time</h1>
 
-		<h2>For you to finish!</h2>
-		<div class="controls-buttons">
 
-             <button onclick="myStyle1();">Change the text <code>size</code></button>
-            <button onclick="myStyle2();">Change the CSS styles using <code>color</code></button>
-        </div>
-    </header>
+<p>This is a 30 second timer:-D</p>
 
-	
-	<main id="container">
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-	</main>
+<input type="text" id="txt">
 
-	<script>
-		let container = document.querySelector('#container');
 
-		// HELPER FUNCTIONS
 
-		function resetAllStyles() {
-			container.removeAttribute('class'); // remove all previous classes
-			container.removeAttribute('style'); // remove all previous styles
-		}
+<script>
 
-		function getRandomNumber(min, max) {
-			let range = max-min;
-			return (Math.random() * range) + min
-		}
+let x = document.getElementById("txt");
+setTimeout(function(){ x.value="2 seconds" }, 2000);
+setTimeout(function(){ x.value="4 seconds" }, 4000);
+setTimeout(function(){ x.value="6 seconds" }, 6000);
+setTimeout(function(){ x.value="8 seconds" }, 8000);
+setTimeout(function(){ x.value="10 seconds" }, 10000);
+setTimeout(function(){ x.value="12 seconds" }, 12000);
+setTimeout(function(){ x.value="14 seconds" }, 14000);
+setTimeout(function(){ x.value="16 seconds" }, 16000);
+setTimeout(function(){ x.value="18 seconds" }, 18000);
+setTimeout(function(){ x.value="20 seconds" }, 20000);
+setTimeout(function(){ x.value="22 seconds" }, 22000);
+setTimeout(function(){ x.value="24 seconds" }, 24000);
+setTimeout(function(){ x.value="26 seconds" }, 26000);
+setTimeout(function(){ x.value="28 seconds" }, 28000);
+setTimeout(function(){ x.value="times up" }, 30000);
+</script>
 
-		function getRoundedRandomNumber(min, max) {
-			let range = max-min;
-			return Math.floor( (Math.random() * range) + min )
-		}
+<script>
+myInterval = setInterval(setColor, 500);
+ 
+function setColor() {
+  let x = document.body;
+  x.style.backgroundColor = x.style.backgroundColor == "yellow" ? "pink" : "yellow";
+}
+ 
+function stopColor() {
+  clearInterval(myInterval);
+}
+</script>
 
-		// EXAMPLES
 
-		function example1() {
-			resetAllStyles();
-			container.style.fontSize = getRandomNumber(10, 100) + "px";
-			container.style.color = "rgb(" + getRoundedRandomNumber(0, 255) + "," + getRoundedRandomNumber(0, 255) + "," + getRoundedRandomNumber(0, 255) + ")";
-		}
 
-		function example2() {
-			resetAllStyles();
-			container.classList.add('example2');
-		}
-
-		// WRITE YOUR JAVASCRIPT CODE BELOW!
-//first button
-        function myStyle1() {
-            resetAllStyles();
-            let randomNumber = Math.random();
-            if (randomNumber < 0.1) {
-                container.style.fontSize = "5px";
-                } else if (randomNumber < 0.3){
-                    container.style.fontSize = "15px";
-                }else if (randomNumber < 0.6){
-                    container.style.fontSize = "30px";
-                }
-                else {
-                    container.style.fontSize = "50px";
-                }
-
-             }
-//second butoon
-        function myStyle2() {
-            resetAllStyles();
-            container.classList.add('my-style');
-        }
-
-	</script>
-	
 </body>
 </html>
