@@ -1,14 +1,28 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Small Sites; Big Stories | Randomness</title>
-	<link rel="stylesheet" href="randomness.css">
-</head>
 <body>
-	<h1>RANDOMNESS!</h1>
+    <p id="hi">
+        hihihi
+    </p>
 
-	<script src="randomness.js"></script>
+    <script>
+        
+        function getRandomNumber(min,max){
+            let range = max-min;
+            return (Math.random()*range)
+        }
+        
+        let randomNumber = getRandomNumber(0,100)
+       
+
+        let body = document.querySelector('body')
+
+        if (randomNumber > 60) {
+            body.style.backgroundColor = "red";
+  
+        } else if (randomNumber < 40) {
+            body.style.backgroundColor = "blue";
+    
+        } else {
+            body.style.backgroundColor = "purple";
+        }
+    </script>
 </body>
-</html>
