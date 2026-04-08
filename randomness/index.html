@@ -3,16 +3,17 @@
         use this tool to decide what color you wear.
     </p>
 
-    <script>
+    <button onclick="getTshirt()">t-shirt</button>
+    <button onclick="getPants()">pants</button>
+    <button onclick="getShoes()">shoes</button>
 
+    <script>
         function getRandomNumber(min, max) {
             let range = max - min;
             return (Math.random() * range)
         }
 
         let randomNumber = getRandomNumber(0, 100)
-
-
         let body = document.querySelector('body')
 
         if (randomNumber < 14) {
@@ -29,6 +30,39 @@
             body.style.backgroundColor = "indigo";
         } else {
             body.style.backgroundColor = "violet";
+        }
+
+        function getTshirt() {
+            let n = getRandomNumber(0, 100);
+            let result;
+            if (n < 20) { result = "t-shirt"; }
+            else if (n < 40) { result = "sweater"; }
+            else if (n < 55) { result = "plaid shirt"; }
+            else if (n < 70) { result = "hoodie"; }
+            else { result = "tank top"; }
+            alert("t-shirt: " + result);
+        }
+
+        function getPants() {
+            let n = getRandomNumber(0, 100);
+            let result;
+            if (n < 30) { result = "jeans"; }
+            else if (n < 50) { result = "sweatpants"; }
+            else if (n < 65) { result = "pleated skirt"; }
+            else if (n < 80) { result = "shorts"; }
+            else { result = "dress pants"; }
+            alert("pants: " + result);
+        }
+
+        function getShoes() {
+            let n = getRandomNumber(0, 100);
+            let result;
+            if (n < 35) { result = "sneakers"; }
+            else if (n < 55) { result = "leather shoes"; }
+            else if (n < 70) { result = "sandals"; }
+            else if (n < 85) { result = "boots"; }
+            else { result = "canvas shoes"; }
+            alert("shoes: " + result);
         }
     </script>
 </body>
