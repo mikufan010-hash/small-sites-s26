@@ -2,11 +2,9 @@
 <html>
 <body>
 
-<h2>JavaScript addEventListener()</h2>
+<p id="demo"></p>
 
-<p>This example uses the addEventListener() method to execute a function when a user clicks on a button.</p>
-
-<button id="myBtn">Try it</button>
+<button id="myBtn">Click me</button>
 
 <script>
 document.getElementById("myBtn").addEventListener("click", myFunction);
@@ -14,6 +12,15 @@ document.getElementById("myBtn").addEventListener("click", myFunction);
 function myFunction() {
   alert ("Hello World!");
 }
+
+
+
+
+window.addEventListener("resize", function(){
+  document.getElementById("demo").innerHTML = Math.random();
+});
+
+
 </script>
 
 </body>
