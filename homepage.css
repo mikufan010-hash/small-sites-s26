@@ -5,7 +5,7 @@
 }
 body {
 	font-family: sans-serif;
-	background-color: hsl(0deg, 100%, 90%);
+	background-color: hsl(0, 43%, 27%);
 	height: 100dvh; /* more info about dvh here: https://web.dev/blog/viewport-units */
 	display: flex;
 	flex-direction: column;
