@@ -1,26 +1,47 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <title>knock.</title>
+  <style>
+   
+    #secret {
+      background: #000000;
+      color: #000000;
+      
+    }
+  </style>
+</head>
 <body>
 
-<p id="demo"></p>
+  <p>It is midnight. Someone is at the door.</p>
 
-<button id="myBtn">Click me</button>
+  <button id="door">knock.</button>
+
+  <p id="message"></p>
+
+  <p>You wonder if they know <span id="secret">you are afraid.</span></p>
 
 <script>
-document.getElementById("myBtn").addEventListener("click", myFunction);
-
-function myFunction() {
-  alert ("Hello World!");
-}
-
-
-
-
-window.addEventListener("resize", function(){
-  document.getElementById("demo").innerHTML = Math.random();
-});
+  let count = 0;
+  const messages = [
+    "Once.",
+    "Twice.",
+    "Three times. They are still waiting."
+  ];
 
 
+  document.getElementById("door").addEventListener("click", function() {
+    if (count < 3) {
+      document.getElementById("message").textContent = messages[count];
+      count++;
+    }
+  });
+
+
+  document.getElementById("secret").addEventListener("mouseover", function() {
+    this.style.color = "#f9f6f0";
+  });
 </script>
 
 </body>
