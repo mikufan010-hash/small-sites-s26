@@ -1,15 +1,27 @@
 <!DOCTYPE html>
 <html>
+<head>
+<style>
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;  /* 水平居中 */
+  align-items: center;      /* 垂直居中 */
+  flex-direction: column;   /* 让 h1 和 p 垂直排 */
+}
+
+#txt {
+  font-size: 24px;
+}
+</style>
+</head>
+
 <body>
 
 <h1>Time</h1>
-
-
-<p>This is a 30 second timer:-D</p>
-
-<!-- <input type="text" id="txt"> -->
+<p>This is a 30 second timer :-D</p>
 <div id="txt"></div>
-
 
 
 <script>
