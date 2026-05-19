@@ -1,4 +1,39 @@
+
+<html>
+<head>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    #hi {
+      font-size: 20px;
+      margin-bottom: 30px;
+      color: #333;
+    }
+
+    button {
+      font-size: 16px;
+      padding: 10px 24px;
+      margin: 6px;
+      border: 2px solid #333;
+      border-radius: 8px;
+      background-color: white;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #333;
+      color: white;
+    }
+  </style>
+</head>
+
+
 <body>
+    
     <p id="hi">
         use this tool to decide what color you wear.
     </p>
@@ -6,6 +41,8 @@
     <button onclick="getTshirt()">t-shirt</button>
     <button onclick="getPants()">pants</button>
     <button onclick="getShoes()">shoes</button>
+
+    
 
     <script>
         function getRandomNumber(min, max) {

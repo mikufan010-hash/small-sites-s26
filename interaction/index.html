@@ -1,20 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8"/>
+  <meta charset="UTF-8" />
   <title>knock.</title>
   <style>
-   
- 
-
     #secret {
       background: #000000;
       color: #000000;
-      
-      
+
+
+    }
+
+    #eye {
+      display: none;
+      width: 200px;
+      margin: 40px auto;
     }
   </style>
 </head>
+
 <body>
 
   <p>It is midnight. Someone is at the door.</p>
@@ -25,27 +30,37 @@
 
   <p>You wonder if they know <span id="secret">you are afraid.</span></p>
 
-<script>
-  let count = 0;
-  const messages = [
-    "Once.",
-    "Twice.",
-    "Three times. They are still waiting."
-  ];
+  <img id="eye" src="eye.jpg">
+
+  <script>
+    let count = 0;
+    const messages = [
+      "Once.",
+      "Twice.",
+      "Three times. They are still waiting."
+    ];
 
 
-  document.getElementById("door").addEventListener("click", function() {
-    if (count < 3) {
-      document.getElementById("message").textContent = messages[count];
-      count++;
-    }
-  });
+    document.getElementById("door").addEventListener("click", function () {
+      if (count < 3) {
+        document.getElementById("message").textContent = messages[count];
+        count++;
+      }
+    });
 
 
-  document.getElementById("secret").addEventListener("mouseover", function() {
-    this.style.color = "red";
-  });
-</script>
+    document.getElementById("secret").addEventListener("mouseover", function () {
+      this.style.color = "red";
+    });
+
+    setTimeout(function () {
+      document.body.style.backgroundColor = "black";
+      document.body.style.color = "white";
+      document.getElementById("eye").style.display = "block";
+    }, 10000);
+
+  </script>
 
 </body>
+
 </html>

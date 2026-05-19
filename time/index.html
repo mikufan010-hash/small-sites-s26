@@ -9,7 +9,10 @@ body {
   justify-content: center;  /* 水平居中 */
   align-items: center;      /* 垂直居中 */
   flex-direction: column;   /* 让 h1 和 p 垂直排 */
+   box-shadow: inset 0 0 0 10px black;  /* 加这一行 */
 }
+
+
 
 #txt {
   font-size: 24px;
@@ -18,8 +21,11 @@ body {
 </head>
 
 <body>
+  
 
 <h1>Time</h1>
+
+
 <p>This is a 30 second timer :-D</p>
 <div id="txt"></div>
 
@@ -55,6 +61,13 @@ function setColor() {
 function stopColor() {
   clearInterval(myInterval);
 }
+
+setTimeout(function(){ 
+    x.innerHTML = "times up";
+    document.body.style.backgroundColor = "red";
+    stopColor(); 
+}, 30000);
+
 </script>
 
 
